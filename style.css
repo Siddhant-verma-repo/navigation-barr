@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    /* background-color: red; */
+    width: 100vw;
+    height: 100vh;
+}
+.container .navbar ul{
+    display: flex;
+    /* background-image: url('https://th.bing.com/th/id/R.97e42b67e0375e4861b3f4740dff19e1?rik=p0UT%2fYCkL1dYJQ&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fN4mXBIO.jpg&ehk=cLKx0jDcrLfWbpNBbjscdE0%2bmATZHpWG6nBSb52BOZo%3d&risl=&pid=ImgRaw&r=0'); */
+    background-image: url('https://th.bing.com/th/id/R.565e78c93557f1f5cc457f824d9714bc?rik=lV%2f%2fYMD%2fzjQ6oQ&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fibG1tbs.jpg&ehk=42pezURjV99lRRl9GzoYCgQmJk83bevl6p5UHDTtvyw%3d&risl=&pid=ImgRaw&r=0');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: black; */
+    opacity: .9;
+    /* height: 10vh; */
+    /* if possible make height and width remove it just so backg image will be fixed */
+    /* width: 100%; */
+    flex-wrap: wrap;
+    text-decoration: none;
+    /* justify-content: space-around; */
+    /* margin: 23px 23px; */
+    padding: 23px 23px ;
+}
+.navbar ul li{
+    /* background-color: aliceblue; */
+    font-size: 1.5rem;
+    display: block;
+    height: fit-content;
+    width: fit-content;
+    margin: 26px 50px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    position: relative;
+    color: red;
+}
+/* this was main to make hover underline for */
+/* i made underline by using after in a link good way to use after */
+a:after{
+    content: "";
+    position: absolute;
+    background-color: aqua;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+/* coloring i can also change font but in only made simple */
+a:hover{
+    /* color: black; */
+    color: white;
+}
+/* This is to show the underline when hovering so i let width 
+in after o then in width a hover after i made width 100% */
+a:hover:after{
+ width: 100%;
+}
+@media (min-width: 360px) and (max-width:700px) {
+    .container .navbar ul{
+        display: flex;
+        background-color: black;
+        /* height: 10vh; */
+        /* width: 100%; */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        padding: 23px 23px ;
+    } 
+a:after{
+    content: "";
+    position: absolute;
+    background-color: aqua;
+    height: 2px;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+a:hover:after{
+    width: 100%;
+}
+}
